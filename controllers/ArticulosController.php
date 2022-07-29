@@ -11,6 +11,7 @@ use yii\filters\AccessControl;
 use app\models\ContactForm;
 use app\extensions\SYii;
 use app\models\Clients;
+use app\controllers\NotFoundHttpException;
 
 
 class ArticulosController extends Controller
@@ -68,7 +69,9 @@ class ArticulosController extends Controller
 
         $model = new Articulos();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->id = Yii::$app->user->identity->client;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
 
         }

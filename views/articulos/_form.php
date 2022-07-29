@@ -14,12 +14,17 @@ use yii\widgets\ActiveForm;
 
         <?php $form = ActiveForm::begin(); ?>
 
-            <div class='col-md-6'>
+        <div class='col-md-6'>
 
-            <?= $form->field($model, 'codigo')->textInput(['maxlength' => true, 'placeholder' => 'Codigo del Articulo']) ?>
+        <?= $form->field($model, 'codigo')->textInput(['maxlength' => true, 'placeholder' => 'Codigo del Articulo']) ?>
 
-            </div>
-            <div class='col-md-6'>
+        </div>
+        <div class='col-md-6'>
+
+        <?= $form->field($model, 'rubro')->dropDownList(app\models\WkRubro::getRubrosList()) ?>
+
+        </div>
+        <div class='col-md-6'>
 
             <?= $form->field($model, 'stock')->textInput(['maxlength' => true, 'placeholder' => 'Cantidad de Articulos']) ?>
 
@@ -36,13 +41,6 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'proveedor')->textInput(['maxlength' => true, 'placeholder' => 'Proveedor']) ?>
 
             </div>
-
-            <div class='col-md-6'>
-
-            <?= $form->field($model, 'rubro')->textInput(['maxlength' => true, 'placeholder' => 'Rubro']) ?>
-
-            </div>
-
         </div>
 
     </div>

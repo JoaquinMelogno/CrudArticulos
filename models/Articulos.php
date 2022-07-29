@@ -5,7 +5,6 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Articulos;
 /**
  * This is the model class for table "libros".
  *
@@ -31,7 +30,6 @@ class Articulos extends \yii\db\ActiveRecord
         return [
             [['codigo','nombre','stock'], 'required'],
             [['codigo','nombre', 'rubro','stock','proveedor'], 'string', 'max' => 255],
-            [['id'], 'integer'],
         ];
     }
 
