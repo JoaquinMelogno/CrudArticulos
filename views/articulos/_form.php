@@ -13,11 +13,6 @@ use yii\widgets\ActiveForm;
         <div class="col-md-12">
 
         <?php $form = ActiveForm::begin(); ?>
-            <div class='col-md-6'>
-
-            <?= $form->field($model, 'cliente')->textInput(['placeholder' => 'Cliente']) ?>
-
-            </div>
 
             <div class='col-md-6'>
 

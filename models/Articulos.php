@@ -29,9 +29,9 @@ class Articulos extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id','codigo','nombre','cliente','stock'], 'required'],
-            [['codigo','nombre'], 'string', 'max' => 255],
-            [['id', 'proveedor', 'rubro', 'cliente','stock'], 'integer'],
+            [['codigo','nombre','stock'], 'required'],
+            [['codigo','nombre', 'rubro','stock','proveedor'], 'string', 'max' => 255],
+            [['id'], 'integer'],
         ];
     }
 

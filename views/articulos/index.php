@@ -41,14 +41,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         'cliente',
                         'proveedor',
                         'codigo',
-                        //'sistema',
-                        //'create_date',
-                        //'create_uid',
-                        //'write_date',
-                        //'write_uid',
-                        //'tipo',
-                        //'ayuda:ntext',
-                        //'grupo',
 
                         [
                             'class' => 'yii\grid\ActionColumn',
